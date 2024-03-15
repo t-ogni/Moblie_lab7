@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Количество: 0"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/key"
+        tools:text="@string/key" />
+
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/value"
+        tools:text="@string/value" />
+
+    <EditText
+        android:id="@+id/value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bntInsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeTextType="none"
+            android:breakStrategy="high_quality"
+            android:onClick="onInsertClick"
+            android:text="@string/insert"
+            android:textSize="12sp"
+            tools:text="@string/insert" />
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeTextType="none"
+            android:breakStrategy="high_quality"
+            android:onClick="onSelectClick"
+            android:text="@string/select"
+            android:textSize="12sp"
+            tools:targetApi="@string/select" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeTextType="none"
+            android:breakStrategy="high_quality"
+            android:onClick="onUpdateClick"
+            android:text="@string/update"
+            android:textSize="12sp"
+            tools:text="@string/update" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeTextType="none"
+            android:breakStrategy="high_quality"
+            android:onClick="onDeleteClick"
+            android:text="@string/delete"
+            android:textSize="12sp"
+            tools:text="@string/delete" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDropAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onDropAllClick"
+        android:text="@string/dropAll"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:text="@string/dropAll" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="?android:attr/listDivider" />
+
+    <ListView
+        android:id="@+id/Table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
